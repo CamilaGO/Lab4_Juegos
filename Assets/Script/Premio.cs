@@ -28,11 +28,12 @@ public class Premio : MonoBehaviour
     {
         Ray myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
-        if (Physics.Raycast(myRay, out hitInfo))
-        //rb.AddForce(-hitInfo.normal * force, ForceMode.Impulse);
+        if (Physics.Raycast(myRay, out hitInfo)){
+            //rb.AddForce(-hitInfo.normal * force, ForceMode.Impulse);
+            GetComponent<AudioSource>().Play();
             rend.material.color = cambio;
-
-
+        }
+          
     }
 
 

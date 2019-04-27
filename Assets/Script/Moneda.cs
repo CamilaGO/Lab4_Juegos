@@ -5,7 +5,7 @@ using UnityEngine;
 public class Moneda : MonoBehaviour
 {
     public int speed = 50;
-    public float health = 50f;
+    public float health = 10f;
 
     // Start is called before the first frame update
     void Start()

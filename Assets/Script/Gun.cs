@@ -31,6 +31,7 @@ public class Gun : MonoBehaviour
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hitInfo, range))
         {
             Debug.Log(hitInfo.transform.name);
+            GetComponent<AudioSource>().Play();
             //Evalua si le dispara a un objeto de tipo moneda
             Moneda moneda = hitInfo.transform.GetComponent<Moneda>();
             if(moneda != null)
